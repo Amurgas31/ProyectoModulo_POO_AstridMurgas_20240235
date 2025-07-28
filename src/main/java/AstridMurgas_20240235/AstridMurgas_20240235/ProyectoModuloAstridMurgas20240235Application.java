@@ -16,5 +16,4 @@ public class ProyectoModuloAstridMurgas20240235Application {
 		//Mantener linea existente
 		SpringApplication.run(ProyectoModuloAstridMurgas20240235Application.class, args);
 	}
-
 }

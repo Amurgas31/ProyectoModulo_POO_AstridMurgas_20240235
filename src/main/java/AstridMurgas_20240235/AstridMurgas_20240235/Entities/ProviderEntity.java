@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 @Entity
-@Table(name = "TBPROVIDER")
+@Table(name = "tbProvider")
 @Getter @Setter @ToString @EqualsAndHashCode
 public class ProviderEntity {
     //Atributos
