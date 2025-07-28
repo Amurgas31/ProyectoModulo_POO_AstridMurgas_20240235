@@ -46,4 +46,19 @@ public class ProviderController {
             ));
         }
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ProviderDTO>actualizar(@PathVariable Long id, @RequestBody ProviderDTO dto){
+        return acceso.actualizarProveedor(id, dto)
+                .map(ResponseEntity::ok)
+                .orElseGet(()->ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?>eliminar(@PathVariable Long id){
+        if (acceso.eliminarProveedor(id)){
+            return ResponseEntity.ok("Eliminado corectamente");
+        }
+        return ResponseEntity.status(404).body("no encontado");
+    }
 }
